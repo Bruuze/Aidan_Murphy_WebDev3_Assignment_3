@@ -193,7 +193,11 @@ th#th-pro-desc-sort {
 
 @media screen and (max-width: 768px){
     
-
+    body{
+        
+        background-color: rgba(90,87,96,1);
+        
+    }
     
     #hamburger-menu {
     
