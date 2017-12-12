@@ -97,7 +97,6 @@
 		/*--- Event Listeners ---*/
 
         document.getElementById("th-module-sort").addEventListener("click", sortModule);
-        document.getElementById("th-pro-id-sort").addEventListener("click", sortId);
         document.getElementById("th-pro-desc-sort").addEventListener("click", sortDesc);
         document.getElementById("th-total-hours-sort").addEventListener("click", sortHours);
         document.getElementById("th-due-sort").addEventListener("click", sortDate);
@@ -109,7 +108,7 @@
             /*--- Event Handlers ---*/
 
             var moduleOfProject = document.getElementById("form-module-name").value;
-            var projectId = document.getElementById("form-project-id").value;
+            var projectId = Math.floor(Math.random*20);
             var projectDesc = document.getElementById("form-project-description").value;
             var totalHours = document.getElementById("form-total-hours").value;
             var dueDate = document.getElementById("form-due-date").value;
@@ -360,8 +359,6 @@
 			<form>
 				
 				<p>Module of Project:</p> <input type="text" id="form-module-name">
-				<br/>
-				<p>Project ID:</p> <input type="text" id="form-project-id">
 				<br/>
 				<p>Project Description:</p> <textarea id="form-project-description"></textarea>
 				<br/>
