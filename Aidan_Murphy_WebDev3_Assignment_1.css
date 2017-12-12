@@ -47,7 +47,7 @@ tr button:hover{
 
 body{
 
-    height: 100vh;
+    height: 100%;
     background: rgba(90,87,96,1);
     background: -moz-linear-gradient(-45deg, rgba(90,87,96,1) 0%, rgba(43,39,52,1) 100%);
     background: -webkit-linear-gradient(-45deg, rgba(90,87,96,1) 0%, rgba(43,39,52,1) 100%);
