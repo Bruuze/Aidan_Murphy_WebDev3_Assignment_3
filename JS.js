@@ -117,7 +117,6 @@
                 refreshTable()
 
                 document.getElementById("form-module-name").value = "";
-                document.getElementById("form-project-id").value = "";
                 document.getElementById("form-project-description").value = "";
                 document.getElementById("form-total-hours").value = "";
                 document.getElementById("form-due-date").value = "";
