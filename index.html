@@ -115,7 +115,7 @@
 
 			/*--- Adds a Project to the Array "Assignments" ---*/
 
-            var formData = {module: moduleOfProject, projid: projectId, projdesc: projectDesc, thours: totalHours, due: dueDate };
+            var formData = {module: moduleOfProject, projid: projectId.toString, projdesc: projectDesc, thours: totalHours, due: dueDate };
 
             if(moduleOfProject == "" || projectId == "" || projectDesc == "" || totalHours == "" || dueDate == ""){
 
