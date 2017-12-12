@@ -182,6 +182,12 @@ th#th-pro-desc-sort {
     
     }
     
+    #closeMenu{
+        
+        display: none;
+        
+    }
+    
 }
 
 @media screen and (max-width: 768px){
@@ -194,5 +200,11 @@ th#th-pro-desc-sort {
     display: inline;
     
 }
+    
+    #closeMenu{
+        
+        display: inline-block;
+        
+    }
     
 }
