@@ -108,14 +108,14 @@
             /*--- Event Handlers ---*/
 
             var moduleOfProject = document.getElementById("form-module-name").value;
-            var projectId = Math.floor(Math.random*20);
+            var projectId = Math.floor(Math.random() * 100);
             var projectDesc = document.getElementById("form-project-description").value;
             var totalHours = document.getElementById("form-total-hours").value;
             var dueDate = document.getElementById("form-due-date").value;
 
 			/*--- Adds a Project to the Array "Assignments" ---*/
 
-            var formData = {module: moduleOfProject, projid: projectId.toString, projdesc: projectDesc, thours: totalHours, due: dueDate };
+            var formData = {module: moduleOfProject, projid: projectId, projdesc: projectDesc, thours: totalHours, due: dueDate };
 
             if(moduleOfProject == "" || projectId == "" || projectDesc == "" || totalHours == "" || dueDate == ""){
 
