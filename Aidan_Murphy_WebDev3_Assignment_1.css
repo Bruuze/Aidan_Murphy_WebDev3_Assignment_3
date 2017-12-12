@@ -54,7 +54,6 @@ body{
     background: -o-linear-gradient(-45deg, rgba(90,87,96,1) 0%, rgba(43,39,52,1) 100%);
     background: -ms-linear-gradient(-45deg, rgba(90,87,96,1) 0%, rgba(43,39,52,1) 100%);
     background: linear-gradient(135deg, rgba(90,87,96,1) 0%, rgba(43,39,52,1) 100%);
-    background-repeat: no-repeat;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a5760', endColorstr='#2b2734', GradientType=1 );
     transition: .3s;
