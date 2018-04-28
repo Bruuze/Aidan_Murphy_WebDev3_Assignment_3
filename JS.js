@@ -1,16 +1,4 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<link href="Aidan_Murphy_WebDev3_Assignment_1.css" rel="stylesheet">
-
-<script>
-
-	/*--- Main Variables ---*/
+/*--- Main Variables ---*/
 
     var assignments = [];
     
@@ -97,7 +85,6 @@
 		/*--- Event Listeners ---*/
 
         document.getElementById("th-module-sort").addEventListener("click", sortModule);
-        document.getElementById("th-pro-id-sort").addEventListener("click", sortId);
         document.getElementById("th-pro-desc-sort").addEventListener("click", sortDesc);
         document.getElementById("th-total-hours-sort").addEventListener("click", sortHours);
         document.getElementById("th-due-sort").addEventListener("click", sortDate);
@@ -109,7 +96,7 @@
             /*--- Event Handlers ---*/
 
             var moduleOfProject = document.getElementById("form-module-name").value;
-            var projectId = document.getElementById("form-project-id").value;
+            var projectId = Math.floor(Math.random() * 100);
             var projectDesc = document.getElementById("form-project-description").value;
             var totalHours = document.getElementById("form-total-hours").value;
             var dueDate = document.getElementById("form-due-date").value;
@@ -130,7 +117,6 @@
                 refreshTable()
 
                 document.getElementById("form-module-name").value = "";
-                document.getElementById("form-project-id").value = "";
                 document.getElementById("form-project-description").value = "";
                 document.getElementById("form-total-hours").value = "";
                 document.getElementById("form-due-date").value = "";
@@ -336,70 +322,3 @@
 
 
     }
-	
-</script>
-
-<title>Assignment Tracker - Web Dev III Assignment</title>
-</head>
-
-<body>
-    
-    <img src="img/hBM.png" id="hamburger-menu" alt="Add To List"/>
-    
-
-<div class="container" id="overall-decoration">
-	
-	<div class="row">
-		
-		<div id="form-decoration">
-
-			<h1>Assignment Tracker</h1>
-
-			<hr/>
-
-			<form>
-				
-				<p>Module of Project:</p> <input type="text" id="form-module-name">
-				<br/>
-				<p>Project ID:</p> <input type="text" id="form-project-id">
-				<br/>
-				<p>Project Description:</p> <textarea id="form-project-description"></textarea>
-				<br/>
-				<p>Total Hours Required:</p> <input type="number" id="form-total-hours">
-				<br/>
-				<p>Due Date:</p> <input type="date" id="form-due-date">
-				
-			</form>
-			
-			<button id="submit-btn">Add Assignment</button>
-            <button id="close-menu">Close Menu</button>
-			
-		</div>
-		
-		<div class="col-sm-offset-3 col-sm-9" id="table-decoration">
-			
-			<table id="parent-insert">
-
-				<tr>
-
-					<th id="th-module-sort">Module</th>
-					<th id="th-pro-id-sort">Project ID</th>
-					<th id="th-pro-desc-sort">Project Description</th>
-					<th id="th-total-hours-sort">Total Hours Required</th>
-					<th id="th-due-sort">Due Date</th>
-					<th>Delete Project</th>
-
-				</tr>
-				
-				
-			</table>
-
-			
-		</div>
-		
-	</div>
-	
-</div>
-
-</body>
-</html>
