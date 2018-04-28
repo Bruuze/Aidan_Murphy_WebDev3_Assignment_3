@@ -1,3 +1,13 @@
+$(document).ready(function() {
+    $(".login-space").click(function(event) {
+        if($(event.target).attr('class') == 'login-space'){
+
+            $('span.login-space').css("display", "none");
+
+        };
+    });
+});
+
 var database = firebase.database();
 var userRef = database.ref('users');
 var snapshot = firebase.database.DataSnapshot;
@@ -6,7 +16,7 @@ var username;
 
 //Btns
 const loginHeader = document.getElementById('login');
-const loginBackground = document.getElementById('exit-login');
+
 const switchArrow = document.getElementById('switch-arrow');
 var loginBoolean = new Boolean(true);
 const txtEmail = document.getElementById('txtEmail');
@@ -24,13 +34,7 @@ const welcome = document.getElementById('welcomeUser');
 
 loginHeader.addEventListener('click', e => {
 
-    $('#login-space').css("display", "flex");
-
-});
-
-loginBackground.addEventListener('click', e => {
-
-    $('#login-space').css("display", "none");
+    $('span.login-space').css("display", "flex");
 
 });
 
@@ -122,6 +126,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         console.log(firebaseUser);
         $('#login').css("display", "none");
         $('#btnLogout').css("display", "inline");
+        $('span.login-space').css("display", "none");
         if (typeof(Storage) !== "undefined") {
             // Store
             localStorage.setItem("uid", userId);

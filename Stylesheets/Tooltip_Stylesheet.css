@@ -50,6 +50,8 @@ body{
     color: white;
     border-radius: 23px;
     margin-right: 20px;
+    position: relative;
+    top: 8px;
 
 }
 
@@ -59,6 +61,7 @@ body{
     border-radius: 23px;
     background-color: white;
     display: none;
+    cursor: pointer;
 
 }
 
@@ -201,7 +204,7 @@ body{
 
 }
 
-#login-space{
+span.login-space{
 
     position: fixed;
     z-index: 9999;
@@ -213,7 +216,7 @@ body{
     background-color: rgba(250, 250, 250, 0.8);
 }
 
-#login-space .col-sm-6{
+span.login-space .col-sm-6{
 
     top: 32vh;
     background-color: white;
@@ -303,6 +306,7 @@ body{
     -moz-box-shadow: 0px 5px 16px -2px rgba(0,0,0,0.5);
     box-shadow: 0px 5px 16px -2px rgba(0,0,0,0.5);
     background-image: url("/Images/transparent.png");
+    margin-top: 20px;
 
 }
 
@@ -329,5 +333,24 @@ body{
 
     float: right;
     margin-top: 20px;
+
+}
+
+#userSaveOptions{
+
+    margin-top: 25px;
+    display: none;
+
+}
+
+#savedOptions{
+
+    display: none;
+
+}
+
+.body .col-sm-9{
+
+    text-align: center;
 
 }

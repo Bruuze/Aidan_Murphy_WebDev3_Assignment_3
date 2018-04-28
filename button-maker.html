@@ -16,8 +16,7 @@
 
     <!-- Libraries & Tools -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"> </script>
-
+    <script src="libs/jquery-3.3.1.min.js"> </script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script>
         var config = {
@@ -35,7 +34,7 @@
     <!-- Stylesheets -->
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="Stylesheets/Tooltip_Stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/Tooltip_Stylesheet.css">
 
     <style id="inline-css"></style>
 
@@ -97,6 +96,8 @@
 
         <div class="col-sm-3">
 
+            <h5>Button Options</h5>
+
             <label for="buttonText">Button Text</label><br/>
             <input type="text" id="buttonText" value="Button" maxlength="16"><br>
             <label for="paddingRange">Padding</label><br/>
@@ -110,24 +111,21 @@
             <label for="roundnessRange">Transition Speed</label><br/>
             <input type="number" id="transitionSpeedText" min="0" max="4" value="0" step=".2"><br>
 
-
-
-
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-sm-9">
             <div id ="buttoncontainer">
                 <a href="javascript:void(0)" class="tooltip-button">Button</a>
             </div>
 
-            <p>
+            <p id="userSaveOptions">
                 <input type="text" id="saveName">
                 <button id="saveButton">save</button>
             </p>
 
         </div>
 
-        <div class="col-sm-3">
+        <div class="col-sm-3" id="savedOptions">
             <h5>Saved Button Styles</h5>
             <ol id="buttonlist">
 
@@ -194,26 +192,23 @@
     </div>
 </div>
 
-<span id="login-space">
+<span class="login-space">
 
-    <div class="container">
+    <div class="container login-space">
 
-        <div class="row">
+        <div class="row login-space">
 
-            <div class="col-sm-3">
+            <div class="col-sm-3 login-space">
 
             </div>
 
             <div class="col-sm-6">
 
-                <span id="exit-login"></span>
                 <span id="switch-arrow"></span>
 
-                <h2>Login</h2>
-                <hr/>
-
                 <div id="login-card">
-
+                    <h2>Login</h2>
+                    <hr/>
                     <input id="txtEmail" type="email" placeholder="Email">
                     <input id="txtPassword" type="password" placeholder="Password">
                     <button id="btnLogin" class="btn btn-action">Log In</button>
@@ -221,6 +216,8 @@
                 </div>
 
                 <div id="register-card" style="display: none">
+                    <h2>Register</h2>
+                    <hr/>
                     <input id="txtName">
                     <input id="txtEmail2" type="email" placeholder="Email">
                     <input id="txtPassword2" type="password" placeholder="Password">
@@ -229,7 +226,7 @@
 
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-3 login-space">
 
             </div>
 

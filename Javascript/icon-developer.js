@@ -147,3 +147,25 @@ $('#saveImage').click(function () {
     saveCanvas(c, 'Icon', 'png');
 
 });
+
+firebase.auth().onAuthStateChanged(firebaseUser => {
+
+    if(firebaseUser){
+
+        $('#userSaveOptions').css('display', 'block');
+        $('.col-sm-9').removeClass().addClass("col-sm-6");
+        $('#savedOptions').css('display', 'block');
+
+        var userIdSwap = firebase.auth().currentUser.uid;
+        var ref = database.ref('users/' + userIdSwap + '/icons');
+        ref.on('value', gotData, errData);
+    }
+    else{
+
+        $('#userSaveOptions').css('display', 'none');
+        $('.body .col-sm-6').removeClass().addClass("col-sm-9");
+        $('#savedOptions').css('display', 'none');
+
+}
+
+});
